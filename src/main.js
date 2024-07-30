@@ -15,6 +15,9 @@ const requireComponent = require.context(
   /Base[A-Z]\w+\.(vue|js)$/
 );
 
+requireComponent.keys().forEach((fileName) => {
+  // Get component config
+  const componentConfig = requireComponent(fileName);
 
   // Get PascalCase name of component
   const componentName = upperFirst(
@@ -26,7 +29,7 @@ const requireComponent = require.context(
     )
   );
   Vue.component(componentName, componentConfig.default || componentConfig);
-// });
+});
 
 new Vue({
   router,
