@@ -26,7 +26,7 @@ const requireComponent = require.context(
     )
   );
   Vue.component(componentName, componentConfig.default || componentConfig);
-});
+// });
 
 new Vue({
   router,
