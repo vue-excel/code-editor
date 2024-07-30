@@ -11,13 +11,7 @@
           :selected="currentPage === 'home'"
           @click="setSelectedPage('home')"
         />
-        <Navitem
-          icon="open-book"
-          text="Docs"
-          linkTo="/docs"
-          :selected="currentPage === 'docs'"
-          @click="setSelectedPage('docs')"
-        />
+    
         <Navitem
           icon="gh-icon"
           text="Repository"
