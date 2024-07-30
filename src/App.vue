@@ -52,11 +52,7 @@
       setSelectedPage: function (page) {
         this.currentPage = page;
       },
-      changeTheme: function () {
-        this.updateTheme(
-          this.theme === "light-theme" ? "dark-theme" : "light-theme"
-        );
-      },
+  
       openExternalLink: function (url) {
         window.open(url, "_blank");
       },
