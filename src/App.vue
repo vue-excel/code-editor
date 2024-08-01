@@ -11,7 +11,13 @@
           :selected="currentPage === 'home'"
           @click="setSelectedPage('home')"
         />
-    
+        <Navitem
+          icon="open-book"
+          text="Docs"
+          linkTo="/docs"
+          :selected="currentPage === 'docs'"
+          @click="setSelectedPage('docs')"
+        />
         <Navitem
           icon="gh-icon"
           text="Repository"
@@ -52,7 +58,11 @@
       setSelectedPage: function (page) {
         this.currentPage = page;
       },
-  
+      changeTheme: function () {
+        this.updateTheme(
+          this.theme === "light-theme" ? "dark-theme" : "light-theme"
+        );
+      },
       openExternalLink: function (url) {
         window.open(url, "_blank");
       },
